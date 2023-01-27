@@ -1,0 +1,61 @@
+
+
+
+cheat <- function(number){
+  
+  
+  if(number ==2){
+    
+    url <- "https://bit.ly/3GLVQ86"
+    data_q2 <- read.csv(url, header =T)
+    plotq2 <- plot(data_q2$DATE, data_q2$TMAX, xlab ="Year", ylab="max temperature", main="Max Temperature at Schiphol")
+    
+    return(plotq2)
+  }
+  
+  
+  
+  if(number==3){
+    
+    ## getting the data set
+    install.packages("titanic")
+    library(titanic)
+    
+    
+    # adjusting variables
+    titanic_train$Survived  <- as.factor(titanic_train$Survived)
+    titanic_train$Sex <- as.factor(titanic_train$Sex)
+    
+    
+    # actual plot
+    plotq3 <- ggplot(data = titanic_train, aes(x=Sex, fill =Survived )) + 
+      geom_bar()+ # adding a bar graph
+      #labs(fill = "How did it go?") + # changing title of the lable 
+      scale_fill_discrete(name = "How did it go?", labels = c("dead", "alive")) # changing name of legend and names of the items in legend
+    
+    return(plotq3)
+    
+  }
+  
+  
+  if(number == 5){
+  
+   plotq5 <-  plot(ToothGrowth$supp, ToothGrowth$len, 
+         xlab = "supplement type", 
+         ylab = "tooth length",  
+         ylim= c(0,50), 
+         col=topo.colors(2), 
+         main = "Type of Supplement based on pig's tooth growth"
+    )
+    legend("topleft", 
+           legend=c("OJ", "VC"), 
+           fill=topo.colors(2), 
+           title="Supplement Type")
+    
+  return(plotq5)
+  }
+
+}
+
+
+cheat(5)
