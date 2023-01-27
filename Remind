@@ -1,9 +1,0 @@
-
-remind <- function(){
-  return(cat("Jo's birthday is the 13.05\nMorty's birthday is the 03.11"))
-}
-remind()
-
-
-
-#
