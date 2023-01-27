@@ -1,0 +1,57 @@
+---
+title: "Assignment3.2"
+author: "Valeria"
+date: "27 1 2023"
+output: html_document
+---
+
+
+The general Function
+the argument is the seed. 
+
+```{r setup, include=FALSE}
+
+art <- function(x){
+  require(jasmines)
+  require(dplyr)
+  use_seed(x) %>%
+    entity_heart(grain = 1000)  %>%
+    unfold_tempest(iterations = 100) %>%
+    style_ribbon(background = "oldlace",
+                 colour = "ind"
+    )
+}
+
+art(1)
+```
+
+
+Changing elements:
+entity_heart creates a heart shape. In the following example I changed it to circle
+
+```{r}
+
+art <- function(x){
+  require(jasmines)
+  require(dplyr)
+  use_seed(x) %>%
+    entity_circle(grain = 1000)  %>%  ## entity enetity
+    unfold_tempest(iterations = 5) %>% ## this is the amount of iterations
+    style_ribbon(background = "oldlace", ## the background color
+                 colour = "ind"  # the color of the object
+    )
+}
+
+art(1)
+
+
+```
+
+
+
+
+
+
+
+
+
