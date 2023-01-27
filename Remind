@@ -1,0 +1,8 @@
+
+remind <- function(){
+  return(cat("Sinja's birthday is the 13.05\nBeau's birthday is the 03.11"))
+}
+remind()
+
+
+
