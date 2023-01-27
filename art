@@ -1,0 +1,9 @@
+art <- function(x){
+use_seed(x) %>%
+  entity_heart(grain = 1000)  %>%
+  unfold_tempest(iterations = 100) %>%
+  style_ribbon(background = "oldlace",
+               colour = "ind"
+               )
+
+}
